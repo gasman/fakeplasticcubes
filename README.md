@@ -35,11 +35,11 @@ Optional:
 
 Edit the file paths at the start of Rakefile to point to your program locations. Then, to build:
 
-  rake
+    rake
 
 This will place the build output in /dist. To fire up the web server:
 
-  node server.js
+    node server.js
 
 You can then visit http://localhost:8124/ to view the compiled version in /dist, or http://localhost:8124/test/
 for the development copy in /src, complete with seekable timeline. Any changes you make in /src will take effect
@@ -52,25 +52,25 @@ All Javascript files linked in <script> tags from /src/index.html will be packed
 
 ## Roadmap
 
-  |- dist - contains the build output (i.e. the stuff you'll zip up and release as your final intro)
-  |- Rakefile - the build script
-  |- server.js - web server app to run under node.js
-  |- src - source files
-  |   |- audio.js - audio playback support code
-  |   |- da.swf - Flash fallback for the audio player
-  |   |- demo.js - top-level demo startup code / main timer loop
-  |   |- dist-index.html - minimal HTML wrapper to be copied to dist/index.html. Contains the bootstrap
-  |   |                    PNG decompression code
-  |   |- dynamicaudio.as - source code for da.swf
-  |   |- index.html - HTML wrapper for development view - contains the seekable timeline code
-  |   |- models.js - functions for building primitive 3D models for use with stage.js
-  |   |- ribbon_scene.js - rendering code for the second scene of the intro
-  |   |- shaders.js - lighting and 2D plotting functions for use with stage.js
-  |   |- stage.js - 3D engine
-  |   |- synth.js - softsynth (including instrument definitions and music data)
-  |   |- tunnel_scene.js - rendering code for the first scene of the intro
-  |
-  |- tmp - temporary gunk produced during build
+    |- dist - contains the build output (i.e. the stuff you'll zip up and release as your final intro)
+    |- Rakefile - the build script
+    |- server.js - web server app to run under node.js
+    |- src - source files
+    |   |- audio.js - audio playback support code
+    |   |- da.swf - Flash fallback for the audio player
+    |   |- demo.js - top-level demo startup code / main timer loop
+    |   |- dist-index.html - minimal HTML wrapper to be copied to dist/index.html. Contains the bootstrap
+    |   |                    PNG decompression code
+    |   |- dynamicaudio.as - source code for da.swf
+    |   |- index.html - HTML wrapper for development view - contains the seekable timeline code
+    |   |- models.js - functions for building primitive 3D models for use with stage.js
+    |   |- ribbon_scene.js - rendering code for the second scene of the intro
+    |   |- shaders.js - lighting and 2D plotting functions for use with stage.js
+    |   |- stage.js - 3D engine
+    |   |- synth.js - softsynth (including instrument definitions and music data)
+    |   |- tunnel_scene.js - rendering code for the first scene of the intro
+    |
+    |- tmp - temporary gunk produced during build
 
 ## Acknowledgements
 
