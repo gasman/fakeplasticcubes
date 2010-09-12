@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript" src="audio.js"></script>
+		<script type="text/javascript" src="synth.js"></script>
+		<script type="text/javascript" src="stage.js"></script>
+		<script type="text/javascript" src="shaders.js"></script>
+		<script type="text/javascript" src="models.js"></script>
+		<script type="text/javascript" src="ribbon_scene.js"></script>
+		<script type="text/javascript" src="tunnel_scene.js"></script>
+		<script type="text/javascript" src="demo.js"></script>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			#ticker_controls {
+				position: fixed;
+				bottom: 0;
+				height: 24px;
+				width: 100%;
+				background-color: #888;
+			}
+			#ticker_controls a {
+				float: left;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+			#ticker {
+				float: left;
+				width: 800px;
+				background-color: white;
+				cursor: crosshair;
+				position: relative;
+			}
+			#ticker_pointer {
+				position: absolute;
+				width: 1px;
+				height: 24px;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="debug" style="color:white;"></div>
+		<div id="ticker_controls">
+			<a href="javascript:void(demo.stop())">stop</a>
+			<a href="javascript:void(demo.resume())">play</a>
+			<div id="ticker"><div id="ticker_pointer"></div>&nbsp;</div>
+		</div>
+		<script type="text/javascript">
+			var tickerPointer = document.getElementById('ticker_pointer');
+			demo.onTick = function(t) {
+				tickerPointer.style.left = (t * 100 / demo.duration) + '%';
+			}
+			document.getElementById('ticker').onmousedown = function(e) {
+				var time = e.layerX * demo.duration / 800;
+				demo.stop();
+				demo.playFrom(time);
+			}
+		</script>
+	</body>
+</html>
