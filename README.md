@@ -48,7 +48,7 @@ immediately, with no need to rebuild.
 Alternatively, you can open the relevant index.html file directly in your browser, but that may
 entail fiddling with local Flash security settings to make it work.
 
-All Javascript files linked in <script> tags from /src/index.html will be packed into the PNG file.
+All Javascript files linked in &lt;script&gt; tags from /src/index.html will be packed into the PNG file.
 
 ## Roadmap
 
